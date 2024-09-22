@@ -30,34 +30,6 @@ def main():
 
         # Mostrar los mensajes recibidos
         st.subheader("Mensajes:")
-        AvatarStyle = [
-            # (lista de estilos de avatar)
-            "adventurer",
-            "adventurer-neutral",
-            "avataaars",
-            "avataaars-neutral",
-            "big-ears",
-            "big-ears-neutral",
-            "big-smile",
-            "bottts",
-            "bottts-neutral",
-            "croodles",
-            "croodles-neutral",
-            "fun-emoji",
-            "icons",
-            "identicon",
-            "initials",
-            "lorelei",
-            "lorelei-neutral",
-            "micah",
-            "miniavs",
-            "open-peeps",
-            "personas",
-            "pixel-art",
-            "pixel-art-neutral",
-            "shapes",
-            "thumbs",
-        ]
 
         for msg in chat_client.messages:
             # Analizar el mensaje para extraer ID, nombre y contenido
@@ -77,13 +49,13 @@ def main():
                 mensaje(
                     message=f"{sender_name}: {content}",
                     is_user=True,
-                    avatar_style=AvatarStyle[15]
+                    avatar_style="lorelei"
                 )
             else:
                 mensaje(
                     message=f"{sender_name}: {content}",
                     is_user=False,
-                    avatar_style=AvatarStyle[2]
+                    avatar_style="bottts"
                 )
 
         # Campo para ingresar y enviar mensajes dentro de un formulario
